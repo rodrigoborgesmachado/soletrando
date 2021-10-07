@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script type="text/javascript" src="javascript/jquery.js"></script>
+    <link rel="icon" type="../image/png" sizes="25x17" href="images/logo16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <title>Soletrando</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/scriptpagina.js"></script>
+    <script type="text/javascript" src="javascript/jquery.maskedinput.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="tituloModal"></h4>
+                </div>
+                <div class="modal-body" id="textoModal">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="interna" style="background-color: #dddddd;" align="justify">
+            <div id="contact" class="container-fluid bg-grey">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2 style="text-align: center;">
+                                Soletrando
+                            </h2>
+                            <hr>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="espacoInicio">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3>
+                                Pratique o português!!
+                                <br> 
+                                O projeto tem como objetivo ver quantas palavras você consegue escrever corretamente em nível fácil, médio e difícil.
+                            </h3>
+                            <hr>
+                            <br>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12 form-group" id="game">
+                                    <h4 style="text-align: center;">
+                                        <button class="buttonStartGame" onclick="ComecaJogo()">Começar o Jogo</button>
+                                        <br>
+                                        <button class="buttonInicio" onclick="ApresentaInstrucoes()">Instrucoes do
+                                            Jogo</button>
+                                        <br>
+                                        <button class="buttonRanking" onclick="PreencheClassificao();">Ranking</button>
+                                    </h4>
+                                    <!---<input class="form-control" id="tempoRelacionamento" name="tempoRelacionamento" placeholder="Anos de relacionamento" type="text" required>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="espacoPreencheDados">
+                    <div class="col-sm-12">
+                        <h3>
+                            Como você gostaria de ser chamado?
+                        </h3>
+                        <input class="form-control" id="nome" name="nome" placeholder="Nome" type="text" required>
+                        <h4 style="text-align: center;">
+                            <button class="buttonStartGame" onclick="Start()">Start</button>
+                            <br>
+                            <button class="buttonInicio" onclick="document.location.reload(true);">Início</button>
+                        </h4>
+                    </div>
+                </div>
+                <div class="row" id="espacoJogo">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <button class="buttonInicio" onclick="document.location.reload(true);">Início</button>
+
+                            <h4 style="text-align: left;">
+                                Quantidade Acertos:
+                                <br>
+                                <b style="color: red;" id="quantidadeAcertos">
+                                </b>
+                                <br>
+                                <br>
+                                <h1 style="text-align: center;color:red;" id="lugarTotal">
+
+                                </h1>
+                            </h4>
+                        </div>
+                        <div class="col-sm-8">
+                            <h1 style="text-align: center;color:red;" id="lugarParaPalavra">
+
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="espacoResultado">
+                <div class="col-sm-12">
+                    <h4 style="text-align: left;" id="resultadoTexto">
+
+                    </h4>
+                    <h4 style="text-align: center;">
+                        <button class="buttonInicio" onclick="document.location.reload(true);">Início</button>
+                        <br>
+                        <button class="buttonStartGame" onclick="ComecaJogo()">Jogar Novamente</button>
+                    </h4>
+                </div>
+            </div>
+            <div class="row" id="espacoClassificacao">
+                <div class="col-sm-12" id="classificacaoTexto">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-grey" style="text-align: center;">
+        SunSale System
+    </footer>
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.getElementById('espacoInicio').hidden = false;
+    document.getElementById('espacoPreencheDados').hidden = true;
+    document.getElementById('espacoJogo').hidden = true;
+    document.getElementById('espacoResultado').hidden = true;
+    document.getElementById('espacoClassificacao').hidden = true;
+
+    var listaPalavras = CriarPalavras();
+    var quantidadeAcertos = 0;
+
+    function ComecaJogo() {
+        document.getElementById('espacoInicio').hidden = true;
+        document.getElementById('espacoJogo').hidden = true;
+        document.getElementById('espacoPreencheDados').hidden = false;
+        document.getElementById('espacoResultado').hidden = true;
+        document.getElementById('espacoClassificacao').hidden = true;
+
+        document.getElementById('nome').focus();
+        if (sessionStorage.getItem('nomeUsuario') != '') {
+            document.getElementById('nome').value = sessionStorage.getItem('nomeUsuario');
+        }
+        else {
+            sessionStorage.setItem('nomeUsuario', '');
+        }
+    }
+
+    function Start() {
+        listaPalavras = CriarPalavras();
+
+        if (document.getElementById('nome').value == "") {
+            alerta("O nome não foi fornecido corretamente!");
+        }
+        else {
+            sessionStorage.setItem('nomeUsuario', document.getElementById('nome').value);
+
+            document.getElementById('espacoInicio').hidden = true;
+            document.getElementById('espacoJogo').hidden = false;
+            document.getElementById('espacoPreencheDados').hidden = true;
+            document.getElementById('espacoResultado').hidden = true;
+            document.getElementById('espacoClassificacao').hidden = true;
+
+            PreencheQuantidadeAcertos();
+
+            PreenchePalavra(0);
+        }
+    }
+
+    function PreencheQuantidadeAcertos() {
+        document.getElementById('quantidadeAcertos').innerHTML = quantidadeAcertos;
+    }
+
+    function PreenchePalavra(indice) {
+        var numeroContas = listaPalavras.length;
+        if (indice == numeroContas) {
+            PreencheResultado(numeroContas);
+            EnviarRequisicaoPOST(sessionStorage.getItem('nomeUsuario'), numeroContas);
+        }
+        else {
+            document.getElementById('lugarParaPalavra').innerHTML = `<button class="buttonInicio" onclick="DizerPalavra('` + listaPalavras[indice] + `')">Reproduzir Palavra</button>`;
+            document.getElementById('lugarTotal').innerHTML = (indice + 1) + ' de ' + numeroContas;
+            document.getElementById('lugarParaPalavra').innerHTML += '<br><br><center><input class="form-control" type="text" id="valorResultado" oninput="InsereResposta(' + indice + ')"></center>';
+            document.getElementById('valorResultado').focus();
+            DizerPalavra(listaPalavras[indice]);
+        }
+    }
+
+    function PreencheResultado(numeroContas) {
+        document.getElementById('espacoInicio').hidden = true;
+        document.getElementById('espacoJogo').hidden = true;
+        document.getElementById('espacoPreencheDados').hidden = true;
+        document.getElementById('espacoResultado').hidden = false;
+        document.getElementById('espacoClassificacao').hidden = true;
+
+        sessionStorage.setItem('nomeUsuario', document.getElementById('nome').value);
+        document.getElementById('resultadoTexto').innerHTML = 'Parabéns '
+            + sessionStorage.getItem('nomeUsuario') +
+            '! Você acertou ' + numeroContas + ' palavras';
+    }
+
+    function InsereResposta(indice) {
+        var result = document.getElementById('valorResultado').value;
+        if (result != '') {
+            if (listaPalavras[indice] == result) {
+                if (document.getElementById('lugarParaPalavra').innerHTML.indexOf("Próximo") == -1) {
+                    document.getElementById('lugarParaPalavra').innerHTML += '<button class="buttonStartGame" id="proximaPalavra" onclick="PreenchePalavra(' + (indice+1) + ')">Próximo</button>';
+                }
+                document.getElementById('valorResultado').value = result;
+                document.getElementById('proximaPalavra').focus();
+            } else {
+                respostaErrada(result);
+            }
+        }
+    }
+    
+    function respostaErrada(resultado){
+        if (document.getElementById('valorResultado').innerHTML.indexOf("Errado") == -1) {
+            document.getElementById('valorResultado').innerHTML += "<p><h5><strong>Errado</strong></h5></p>";
+            document.getElementById('valorResultado').style.borderColor = "#e10";
+        }
+        
+    }
+
+    function ApresentaInstrucoes() {
+        informa('O jogo consiste em ouvir as palavras e escreve-las corretamente. Começa com o nível fácil e na medida que se vai acertando vai dificultando. O tempo não é contado, mas sim o número de palavras corretas apresentado. Aquele que acertar mais palavras fica primeiro no ranking.');
+    }
+
+    function PreencheClassificao() {
+        document.getElementById('espacoInicio').hidden = true;
+        document.getElementById('espacoJogo').hidden = true;
+        document.getElementById('espacoPreencheDados').hidden = true;
+        document.getElementById('espacoResultado').hidden = true;
+        document.getElementById('espacoClassificacao').hidden = false;
+
+        var listaClassificacao = BuscaLista();
+        document.getElementById('classificacaoTexto').innerHTML = '<h2 style="text-align: center;">Classificação</h2>';
+
+        var texto = '';
+        var ultimoNumeroAcerto = 0;
+        var posicao = 1;
+        
+        texto += '  <table class="table table-striped">';
+        texto += '    <thead>';
+        texto += '      <tr>';
+        texto += '        <th><h4 style="text-align: center;">Posição</h4></th>';
+        texto += '        <th><h4 style="text-align: center;">Nome</h4></th>';
+        texto += '        <th><h4 style="text-align: center;">Total Acertos</h4></th>';
+        texto += '      </tr>';
+        texto += '    </thead>';
+        texto += '    <tbody>';
+
+        for (i = 0; i < listaClassificacao.lista.length; i++) {
+            texto += '      <tr>';
+            texto += '        <td>';
+            texto += '         <h4 style="text-align: center;">' + posicao + '</h4>';
+            texto += '        </td>';
+            texto += '        <td>';
+            texto += '          <h4 style="text-align: center;">' + listaClassificacao.lista[i].Nome + '</h4>';
+            texto += '        </td>';
+            texto += '        <td>';
+            texto += '          <h4 style="text-align: center;">' + listaClassificacao.lista[i].Numeroacertos + '</h4>';
+            texto += '        </td>';
+            texto += '        <td>';
+            texto += '      </tr>';
+
+            posicao++;
+        }
+        
+        texto += '    </tbody>';
+        texto += '  </table>';
+
+        document.getElementById('classificacaoTexto').innerHTML += texto +
+            `<h4 style="text-align: center;">
+                                <button class="buttonInicio" onclick="PreencheClassificao();">Atualizar</button>
+                                <br>
+                                <button class="buttonInicio" onclick="document.location.reload(true);">Início</button>
+                            </h4>`;
+    }
+
+    function alerta(mensagem) {
+        AbrirModal("Alerta", mensagem);
+    }
+
+    function informa(mensagem) {
+        AbrirModal("Informação", mensagem);
+    }
+
+    function AbrirModal(tituloModal, textoModal) {
+        var titulo = document.querySelector('#tituloModal');
+        var texto = document.querySelector('#textoModal');
+
+        titulo.innerHTML = '';
+        titulo.innerHTML = tituloModal;
+        texto.innerHTML = '';
+        texto.innerHTML = '<p>' + textoModal + '</p>';
+
+        $("#myModal").modal();
+    }
+
+</script>
