@@ -203,6 +203,7 @@
         }
         else {
             document.getElementById('lugarParaPalavra').innerHTML = `<button class="buttonInicio" onclick="DizerPalavra('` + listaPalavras[indice] + `')">Reproduzir Palavra</button>`;
+            document.getElementById('lugarParaPalavra').innerHTML += `<br><button class="buttonInicio" onclick="alert('` + listaPalavras[indice] + `')">Revelar Palavra</button>`;
             document.getElementById('lugarTotal').innerHTML = (indice + 1) + ' de ' + numeroContas;
             document.getElementById('lugarParaPalavra').innerHTML += '<br><br><center><input class="form-control" type="text" id="valorResultado" oninput="InsereResposta(' + indice + ')"></center>';
             document.getElementById('valorResultado').focus();
