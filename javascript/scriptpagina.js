@@ -58,15 +58,21 @@ function CriarPalavras(){
     return lista;
 };
 
+var synth = window.speechSynthesis;
+synth.voice = window.speechSynthesis.getVoices()[15];
+synth.lang = "pt";
+synth.volume = 1;
+synth.rate = 1;
+synth.pitch = 1;
+
+synth.addEventListener('voiceschanged', function() {
+  var voices = synth.getVoices();
+});
+
 function DizerPalavra(palavra){
-    let speech = new SpeechSynthesisUtterance();
-    speech.lang = "pt";
-    speech.voice = window.speechSynthesis.getVoices()[15];
-    speech.volume = 1;
-    speech.rate = 1;
-    speech.pitch = 1;
-    speech.text = palavra;
-    window.speechSynthesis.speak(speech);
+    
+    synth.text = palavra;
+    window.speechSynthesis.speak(synth);
 }
 
 function EnviarRequisicaoPOST(nome, numeroAcertos){
