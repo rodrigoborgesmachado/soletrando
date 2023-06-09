@@ -1,0 +1,58 @@
+.jogo{
+    width: 90%;
+}
+
+.titulo{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.opcoes{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.opcoes svg{
+    margin: 15px;
+    cursor: pointer;
+}
+
+.texto{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.texto input{
+    font-size: 50px;
+    width: 50%;
+}
+
+.texto button{
+    margin-top: 40px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: beige;
+    color: #121212;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.texto button:hover{
+    background-color: rgb(37, 26, 166);
+    color: #FFF;
+  }
