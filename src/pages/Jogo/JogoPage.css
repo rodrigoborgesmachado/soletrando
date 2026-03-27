@@ -1,0 +1,38 @@
+.jogo-grid {
+  gap: 14px;
+}
+
+.jogo-form-wrap {
+  margin-top: 14px;
+}
+
+.jogo-feedback {
+  margin: 12px 0 0;
+  font-weight: 800;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.jogo-feedback-success {
+  color: #0f5a3f;
+  background: rgba(45, 187, 127, 0.15);
+  border-color: rgba(45, 187, 127, 0.32);
+}
+
+.jogo-feedback-error {
+  color: #7b1d2c;
+  background: rgba(224, 88, 106, 0.14);
+  border-color: rgba(224, 88, 106, 0.28);
+}
+
+.jogo-next-action {
+  margin-top: 12px;
+}
+
+.jogo-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}

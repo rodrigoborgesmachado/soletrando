@@ -1,0 +1,37 @@
+.score-board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.score-board > div {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  text-align: center;
+}
+
+.score-board span {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.score-board strong {
+  font-size: 1.2rem;
+}
+
+.score-hit {
+  color: var(--color-success);
+}
+
+.score-miss {
+  color: var(--color-danger);
+}
+
+@media (max-width: 700px) {
+  .score-board {
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+  }
+}

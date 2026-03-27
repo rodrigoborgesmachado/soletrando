@@ -1,0 +1,9 @@
+.ranking-actions {
+  margin-bottom: 14px;
+}
+
+.ranking-error {
+  margin: 0 0 14px;
+  color: var(--color-danger);
+  font-weight: 700;
+}

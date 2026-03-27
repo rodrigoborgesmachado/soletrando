@@ -1,0 +1,50 @@
+.ranking-groups {
+  display: grid;
+  gap: 14px;
+}
+
+.ranking-group {
+  display: grid;
+  gap: 8px;
+}
+
+.ranking-group-title {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.ranking-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 360px;
+}
+
+.ranking-table th,
+.ranking-table td {
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.ranking-table thead {
+  background: #f0f7ff;
+}
+
+.ranking-table tbody tr:nth-child(even) {
+  background: #fafcff;
+}
+
+.ranking-table td:first-child {
+  font-weight: 800;
+}
+
+.ranking-empty {
+  margin: 0;
+  color: var(--color-muted);
+  font-weight: 700;
+}

@@ -1,0 +1,21 @@
+.instrucoes-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.instruction-list,
+.tips-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 9px;
+}
+
+.instrucoes-actions {
+  margin-top: 20px;
+}
+
+@media (max-width: 860px) {
+  .instrucoes-grid {
+    grid-template-columns: 1fr;
+  }
+}

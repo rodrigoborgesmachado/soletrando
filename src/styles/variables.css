@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;500;700;800&display=swap');
+
+:root {
+  --font-title: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  --font-body: 'Nunito', 'Segoe UI', sans-serif;
+
+  --color-bg-start: #fff7d7;
+  --color-bg-end: #dff8ff;
+  --color-surface: rgba(255, 255, 255, 0.86);
+  --color-surface-strong: #ffffff;
+  --color-border: #d7e2ef;
+  --color-text: #24324a;
+  --color-muted: #627489;
+
+  --color-primary: #ff7f50;
+  --color-primary-hover: #f16f3f;
+  --color-secondary: #2d9cdb;
+  --color-success: #2dbb7f;
+  --color-danger: #e0586a;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --shadow-soft: 0 12px 30px rgba(38, 67, 104, 0.14);
+  --shadow-card: 0 8px 22px rgba(46, 79, 111, 0.12);
+
+  --container-max-width: 1080px;
+}

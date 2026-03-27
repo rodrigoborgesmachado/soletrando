@@ -1,0 +1,15 @@
+.politica-grid {
+  gap: 14px;
+}
+
+.politica-grid p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.politica-list {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}

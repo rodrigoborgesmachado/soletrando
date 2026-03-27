@@ -1,0 +1,12 @@
+<svg width="260" height="170" viewBox="0 0 260 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="18" width="70" height="70" rx="20" fill="#FF9366"/>
+  <rect x="95" y="8" width="70" height="70" rx="20" fill="#6BCBFF"/>
+  <rect x="180" y="18" width="70" height="70" rx="20" fill="#FFC857"/>
+  <rect x="52" y="92" width="70" height="70" rx="20" fill="#6DE1A4"/>
+  <rect x="137" y="92" width="70" height="70" rx="20" fill="#A78BFA"/>
+  <text x="33" y="64" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="white">S</text>
+  <text x="117" y="54" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="white">O</text>
+  <text x="203" y="64" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="white">L</text>
+  <text x="75" y="138" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="white">E</text>
+  <text x="160" y="138" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="white">T</text>
+</svg>
