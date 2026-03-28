@@ -103,6 +103,22 @@
   color: var(--color-text);
 }
 
+.home-partner-link {
+  margin: 14px 0 0;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.home-partner-link a {
+  color: var(--color-secondary);
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.home-partner-link a:hover {
+  filter: brightness(0.95);
+}
+
 @media (max-width: 700px) {
   .home-letter-box {
     width: 56px;

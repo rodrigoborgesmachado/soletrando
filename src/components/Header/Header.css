@@ -71,6 +71,11 @@
   font-size: 0.93rem;
 }
 
+.nav-item-external::after {
+  content: ' ↗';
+  font-size: 0.82em;
+}
+
 .nav-item.active {
   background: rgba(45, 156, 219, 0.13);
   color: var(--color-secondary);

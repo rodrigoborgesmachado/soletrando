@@ -50,6 +50,14 @@ function HomePage() {
             Desempenho
           </Link>
         </div>
+
+        <p className="home-partner-link">
+          Pratique também a tabuada aqui:{' '}
+          <a href="https://www.tabuadadivertida.com/" target="_blank" rel="noopener noreferrer">
+            tabuada divertida
+          </a>
+          .
+        </p>
       </section>
     </PageContainer>
   );

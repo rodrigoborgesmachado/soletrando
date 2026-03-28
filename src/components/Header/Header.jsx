@@ -31,6 +31,14 @@ function Header() {
           <NavLink to="/sobre" className="nav-item">
             Sobre
           </NavLink>
+          <a
+            className="nav-item nav-item-external"
+            href="https://www.tabuadadivertida.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tabuada Divertida
+          </a>
         </nav>
       </div>
     </header>
