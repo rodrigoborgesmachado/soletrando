@@ -12,7 +12,7 @@ function Footer() {
         <nav className="footer-links" aria-label="Links institucionais">
           <Link to="/sobre">Sobre</Link>
           <Link to="/contato">Contato</Link>
-          <Link to="/politica-privacidade">Politica de Privacidade</Link>
+          <Link to="/politica-privacidade">Política de Privacidade</Link>
         </nav>
 
         <small>© {new Date().getFullYear()} SunSale System. Todos os direitos reservados.</small>

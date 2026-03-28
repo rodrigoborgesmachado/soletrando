@@ -18,10 +18,10 @@ import './JogoPage.css';
 const EMPTY_WORDS = [];
 const SENTENCE_TEMPLATES = [
   'Eu amo [verbo] todos os dias.',
-  'Sera que [verbo] seria uma boa ideia?',
-  'Talvez voce va [verbo] amanha.',
+  'Será que [verbo] seria uma boa ideia?',
+  'Talvez você vá [verbo] amanhã.',
   'Hoje eu decidi [verbo] com calma.',
-  'Nao deixe de [verbo] quando tiver oportunidade.',
+  'Não deixe de [verbo] quando tiver oportunidade.',
   'Vamos [verbo] antes do jantar.',
   'E se a gente [verbo] agora?',
   'Eu preciso [verbo] melhor nesta semana.',
@@ -312,12 +312,12 @@ function JogoPage() {
     if (isCorrect) {
       setFeedback({
         type: 'success',
-        message: 'Acertou! Clique em Proxima para continuar.',
+        message: 'Acertou! Clique em Próxima para continuar.',
       });
     } else {
       setFeedback({
         type: 'error',
-        message: `Errou. Voce digitou: "${typedValue || '(vazio)'}". A palavra certa era: "${currentWord.palavra}".`,
+        message: `Errou. Você digitou: "${typedValue || '(vazio)'}". A palavra certa era: "${currentWord.palavra}".`,
       });
     }
 
@@ -350,11 +350,11 @@ function JogoPage() {
 
   return (
     <PageContainer>
-      <h1 className="page-title">{isPracticeMode ? 'Modo pratica' : 'Partida em andamento'}</h1>
+      <h1 className="page-title">{isPracticeMode ? 'Modo prática' : 'Partida em andamento'}</h1>
       <p className="page-intro">
         {isPracticeMode
-          ? 'Treino focado nas palavras que voce mais errou. Ouca, escreva e reforce sua ortografia.'
-          : 'Ouca a palavra, memorize e escreva. Cada rodada conta para o seu ranking final.'}
+          ? 'Treino focado nas palavras que você mais errou. Ouça, escreva e reforce sua ortografia.'
+          : 'Ouça a palavra, memorize e escreva. Cada rodada conta para o seu ranking final.'}
       </p>
 
       <div className="page-grid jogo-grid">
@@ -367,9 +367,9 @@ function JogoPage() {
           questionCount={totalRounds}
         />
 
-        <Card title={isPracticeMode ? 'Rodada de pratica' : 'Rodada atual'}>
+        <Card title={isPracticeMode ? 'Rodada de prática' : 'Rodada atual'}>
           {loadingRound ? (
-            <Loader text="Buscando proxima palavra..." />
+            <Loader text="Buscando próxima palavra..." />
           ) : (
             <WordDisplay
               hasWord={Boolean(currentWord?.palavra)}
@@ -396,7 +396,7 @@ function JogoPage() {
           {roundResolved ? (
             <div className="jogo-next-action">
               <Button variant="primary" onClick={handleNextRound}>
-                {round >= totalRounds ? 'Finalizar partida' : 'Proxima'}
+                {round >= totalRounds ? 'Finalizar partida' : 'Próxima'}
               </Button>
             </div>
           ) : null}
@@ -404,7 +404,7 @@ function JogoPage() {
 
         <div className="jogo-bottom">
           <Button variant="ghost" onClick={() => navigate(isPracticeMode ? '/desempenho' : '/selecao-nivel')}>
-            {isPracticeMode ? 'Voltar ao desempenho' : 'Trocar nivel'}
+            {isPracticeMode ? 'Voltar ao desempenho' : 'Trocar nível'}
           </Button>
           <Button variant="secondary" onClick={() => finalizeGame(hits, misses)}>
             Encerrar partida

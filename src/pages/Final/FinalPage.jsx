@@ -20,8 +20,8 @@ function FinalPage() {
   if (!lastResult) {
     return (
       <PageContainer>
-        <h1 className="page-title">Partida nao encontrada</h1>
-        <p className="page-intro">Voce ainda nao finalizou uma rodada nesta sessao.</p>
+        <h1 className="page-title">Partida não encontrada</h1>
+        <p className="page-intro">Você ainda não finalizou uma rodada nesta sessão.</p>
         <Button onClick={() => navigate('/selecao-nivel')} variant="primary">
           Iniciar jogo
         </Button>
@@ -44,12 +44,12 @@ function FinalPage() {
 
     const trimmedName = name.trim();
     if (!trimmedName) {
-      setError('Informe seu nome para salvar a pontuacao.');
+      setError('Informe seu nome para salvar a pontuação.');
       return;
     }
 
     if (resultLevel < 1 || resultQuestionCount < 1) {
-      setError('Nivel e quantidade de questoes invalidos para salvar.');
+      setError('Nível e quantidade de questões inválidos para salvar.');
       return;
     }
 
@@ -61,10 +61,10 @@ function FinalPage() {
         nivel: resultLevel,
         quantidadeQuestoes: resultQuestionCount,
       });
-      setMessage('Pontuacao salva com sucesso!');
+      setMessage('Pontuação salva com sucesso!');
       setSaved(true);
     } catch (requestError) {
-      setError(requestError.message || 'Nao foi possivel salvar a pontuacao.');
+      setError(requestError.message || 'Não foi possível salvar a pontuação.');
     } finally {
       setSaving(false);
     }
@@ -75,27 +75,27 @@ function FinalPage() {
       <h1 className="page-title">Resultado final</h1>
       <p className="page-intro">
         {isPracticeMode
-          ? 'Sessao de pratica concluida. Revise seu desempenho e repita quando quiser.'
+          ? 'Sessão de prática concluída. Revise seu desempenho e repita quando quiser.'
           : 'Muito bem! Veja como foi seu desempenho nesta partida.'}
       </p>
 
       <div className="page-grid final-grid">
-        <Card title={isPracticeMode ? 'Resumo da pratica' : 'Resumo da partida'}>
+        <Card title={isPracticeMode ? 'Resumo da prática' : 'Resumo da partida'}>
           <ul className="final-summary">
             <li>
               <span>Modo</span>
-              <strong>{isPracticeMode ? 'Pratica' : 'Jogo normal'}</strong>
+              <strong>{isPracticeMode ? 'Prática' : 'Jogo normal'}</strong>
             </li>
 
             {!isPracticeMode ? (
               <li>
-                <span>Nivel</span>
+                <span>Nível</span>
                 <strong>{resultLevel}</strong>
               </li>
             ) : null}
 
             <li>
-              <span>Quantidade de questoes</span>
+              <span>Quantidade de questões</span>
               <strong>{resultQuestionCount}</strong>
             </li>
             <li>
@@ -115,7 +115,7 @@ function FinalPage() {
 
         {isPracticeMode ? (
           <Card title="Ranking">
-            <p className="final-message">No modo pratica, este resultado fica apenas no historico local.</p>
+            <p className="final-message">No modo prática, este resultado fica apenas no histórico local.</p>
           </Card>
         ) : (
           <Card title="Salvar no ranking">
@@ -134,7 +134,7 @@ function FinalPage() {
               {message ? <p className="final-message">{message}</p> : null}
 
               <Button type="submit" variant="success" disabled={saving || saved}>
-                {saving ? 'Salvando...' : saved ? 'Pontuacao salva' : 'Salvar pontuacao'}
+                {saving ? 'Salvando...' : saved ? 'Pontuação salva' : 'Salvar pontuação'}
               </Button>
             </form>
           </Card>

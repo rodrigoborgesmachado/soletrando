@@ -12,7 +12,7 @@ function WordDisplay({
   onChangeSpeechMode,
 }) {
   if (!hasWord) {
-    return <p className="word-empty">Sem palavra disponivel para este nivel.</p>;
+    return <p className="word-empty">Sem palavra disponível para este nível.</p>;
   }
 
   const audioReady = speechSupported && hasPortugueseVoice;
@@ -28,7 +28,7 @@ function WordDisplay({
         <Button variant="ghost" onClick={onSpeakExample} disabled={!audioReady || isSpeaking}>
           Ouvir exemplo em frase
         </Button>
-        <small>Repita o audio quantas vezes precisar.</small>
+        <small>Repita o áudio quantas vezes precisar.</small>
       </div>
 
       <div className="word-speed">
@@ -54,11 +54,11 @@ function WordDisplay({
       </div>
 
       {!speechSupported ? (
-        <p className="word-warning">Seu navegador nao suporta leitura de voz. Use um navegador moderno.</p>
+        <p className="word-warning">Seu navegador não suporta leitura de voz. Use um navegador moderno.</p>
       ) : null}
 
       {speechSupported && !hasPortugueseVoice ? (
-        <p className="word-warning">Nao encontramos voz em portugues no navegador. Ative uma voz PT para jogar.</p>
+        <p className="word-warning">Não encontramos voz em português no navegador. Ative uma voz PT para jogar.</p>
       ) : null}
     </section>
   );

@@ -31,17 +31,17 @@ function HomePage() {
 
         <h1 className="page-title">Soletrando</h1>
         <p className="page-intro">
-          Treine leitura, memoria e ortografia ouvindo palavras em portugues. Escolha nivel e quantidade de questoes
+          Treine leitura, memória e ortografia ouvindo palavras em português. Escolha nível e quantidade de questões
           para disputar o ranking.
         </p>
         <p className="home-company">Um projeto da SunSale System.</p>
 
         <div className="home-actions">
           <Link to="/selecao-nivel" className="home-link-btn home-link-primary">
-            Comecar agora
+            Começar agora
           </Link>
           <Link to="/instrucoes" className="home-link-btn home-link-secondary">
-            Ver instrucoes
+            Ver instruções
           </Link>
           <Link to="/ranking" className="home-link-btn home-link-ghost">
             Ranking

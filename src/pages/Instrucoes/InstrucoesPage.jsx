@@ -11,32 +11,32 @@ function InstrucoesPage() {
     <PageContainer>
       <h1 className="page-title">Como jogar</h1>
       <p className="page-intro">
-        O objetivo e ouvir a palavra em portugues, soletrar corretamente e conquistar a melhor pontuacao.
+        O objetivo é ouvir a palavra em português, soletrar corretamente e conquistar a melhor pontuação.
       </p>
 
       <div className="page-grid instrucoes-grid">
         <Card title="Passo a passo">
           <ol className="instruction-list">
-            <li>Escolha o nivel e a quantidade de questoes.</li>
-            <li>Escute a palavra e repita o audio quantas vezes quiser.</li>
+            <li>Escolha o nível e a quantidade de questões.</li>
+            <li>Escute a palavra e repita o áudio quantas vezes quiser.</li>
             <li>Digite a resposta e confirme.</li>
-            <li>Veja o feedback da rodada e avance para a proxima.</li>
+            <li>Veja o feedback da rodada e avance para a próxima.</li>
             <li>No final, informe seu nome para salvar no ranking.</li>
           </ol>
         </Card>
 
-        <Card title="Dicas rapidas">
+        <Card title="Dicas rápidas">
           <ul className="tips-list">
-            <li>Use a opcao de fala lenta em palavras mais longas.</li>
-            <li>Preste atencao nos encontros consonantais.</li>
-            <li>Quanto mais acertos, melhor sua posicao no ranking.</li>
+            <li>Use a opção de fala lenta em palavras mais longas.</li>
+            <li>Preste atenção nos encontros consonantais.</li>
+            <li>Quanto mais acertos, melhor sua posição no ranking.</li>
           </ul>
         </Card>
       </div>
 
       <div className="instrucoes-actions">
         <Button variant="primary" onClick={() => navigate('/selecao-nivel')}>
-          Ir para selecao de nivel
+          Ir para seleção de nível
         </Button>
       </div>
     </PageContainer>

@@ -15,9 +15,9 @@ function Header() {
           </span>
         </NavLink>
 
-        <nav className="site-nav" aria-label="Navegacao principal">
+        <nav className="site-nav" aria-label="Navegação principal">
           <NavLink to="/instrucoes" className="nav-item">
-            Instrucoes
+            Instruções
           </NavLink>
           <NavLink to="/selecao-nivel" className="nav-item">
             Jogar

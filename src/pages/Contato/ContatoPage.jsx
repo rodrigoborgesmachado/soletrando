@@ -7,7 +7,7 @@ function ContatoPage() {
     <PageContainer>
       <h1 className="page-title">Contato</h1>
       <p className="page-intro">
-        Se voce encontrou algum problema, tem sugestoes de melhoria ou quer falar com a equipe, use os canais abaixo.
+        Se você encontrou algum problema, tem sugestões de melhoria ou quer falar com a equipe, use os canais abaixo.
       </p>
 
       <div className="page-grid contato-grid">
@@ -24,14 +24,14 @@ function ContatoPage() {
           </p>
         </Card>
 
-        <Card title="Repositorio e projetos">
+        <Card title="Repositório e projetos">
           <p>
             GitHub:{' '}
             <a href="https://github.com/rodrigoborgesmachado" target="_blank" rel="noreferrer">
               github.com/rodrigoborgesmachado
             </a>
           </p>
-          <p>Atendemos feedback sobre jogo, ranking, audio e experiencia de uso.</p>
+          <p>Atendemos feedback sobre jogo, ranking, áudio e experiência de uso.</p>
         </Card>
       </div>
     </PageContainer>

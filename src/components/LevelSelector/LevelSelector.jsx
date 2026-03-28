@@ -28,8 +28,8 @@ function LevelSelector({
         ))}
       </div>
 
-      <section className="question-count-selector" aria-label="Quantidade de questoes">
-        <p>Quantidade de questoes:</p>
+      <section className="question-count-selector" aria-label="Quantidade de questões">
+        <p>Quantidade de questões:</p>
         <div className="question-count-grid">
           {questionCountOptions.map((option) => (
             <button
@@ -45,7 +45,7 @@ function LevelSelector({
       </section>
 
       <Button variant="primary" onClick={onStart} disabled={!selected || !selectedQuestionCount}>
-        Comecar desafio
+        Começar desafio
       </Button>
     </div>
   );

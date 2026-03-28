@@ -35,7 +35,7 @@ function DesempenhoPage() {
 
   const handleClearHistory = () => {
     clearMatchHistory();
-    setMessage('Historico local limpo com sucesso.');
+    setMessage('Histórico local limpo com sucesso.');
     setHistoryVersion((value) => value + 1);
   };
 
@@ -49,7 +49,7 @@ function DesempenhoPage() {
       .filter((item) => Boolean(item.palavra));
 
     if (wordsToPractice.length === 0) {
-      setMessage('Ainda nao ha palavras com erro para praticar.');
+      setMessage('Ainda não há palavras com erro para praticar.');
       return;
     }
 
@@ -61,7 +61,7 @@ function DesempenhoPage() {
     <PageContainer>
       <h1 className="page-title">Desempenho</h1>
       <p className="page-intro">
-        Dados locais das suas partidas neste navegador. Use para acompanhar evolucao e praticar palavras com mais
+        Dados locais das suas partidas neste navegador. Use para acompanhar evolução e praticar palavras com mais
         erros.
       </p>
 
@@ -70,7 +70,7 @@ function DesempenhoPage() {
           Atualizar
         </Button>
         <Button variant="ghost" onClick={handleClearHistory} disabled={snapshot.totalMatches === 0}>
-          Limpar historico local
+          Limpar histórico local
         </Button>
       </div>
 
@@ -89,7 +89,7 @@ function DesempenhoPage() {
                 <strong>{snapshot.totalMatches}</strong>
               </div>
               <div>
-                <span>Questoes</span>
+                <span>Questões</span>
                 <strong>{snapshot.totalQuestions}</strong>
               </div>
               <div>
@@ -107,14 +107,14 @@ function DesempenhoPage() {
             </div>
           </Card>
 
-          <Card title="Ultimos resultados">
+          <Card title="Últimos resultados">
             <div className="desempenho-table-wrap">
               <table className="desempenho-table">
                 <thead>
                   <tr>
                     <th>Data</th>
-                    <th>Nivel</th>
-                    <th>Questoes</th>
+                    <th>Nível</th>
+                    <th>Questões</th>
                     <th>Acertos</th>
                     <th>Erros</th>
                   </tr>
@@ -136,7 +136,7 @@ function DesempenhoPage() {
 
           <Card title="Palavras para praticar">
             {snapshot.mostMissedWords.length === 0 ? (
-              <p className="desempenho-empty">Nenhuma palavra errada registrada ate agora.</p>
+              <p className="desempenho-empty">Nenhuma palavra errada registrada até agora.</p>
             ) : (
               <>
                 <div className="desempenho-practice-action">
@@ -151,8 +151,8 @@ function DesempenhoPage() {
                       <tr>
                         <th>Palavra</th>
                         <th>Erros</th>
-                        <th>Niveis</th>
-                        <th>Ultimo erro</th>
+                        <th>Níveis</th>
+                        <th>Último erro</th>
                         <th>Respostas digitadas</th>
                       </tr>
                     </thead>

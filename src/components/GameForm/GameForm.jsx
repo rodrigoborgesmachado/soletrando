@@ -18,7 +18,7 @@ function GameForm({ disabled = false, onSubmit }) {
     <>
       {typedChars.length > 0 ? (
         <div className="game-typed-preview" aria-live="polite">
-          <span className="sr-only">Resposta em digitacao</span>
+          <span className="sr-only">Resposta em digitação</span>
           <div className="game-typed-grid">
             {typedChars.map((char, index) =>
               char === ' ' ? (

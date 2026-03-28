@@ -29,9 +29,9 @@ export const mockWords = [
   { id: 2003, nivel: 2, palavra: 'professor' },
   { id: 2004, nivel: 2, palavra: 'floresta' },
   { id: 2005, nivel: 2, palavra: 'camiseta' },
-  { id: 3001, nivel: 3, palavra: 'extraordinario' },
+  { id: 3001, nivel: 3, palavra: 'extraordinário' },
   { id: 3002, nivel: 3, palavra: 'responsabilidade' },
   { id: 3003, nivel: 3, palavra: 'constitucional' },
-  { id: 3004, nivel: 3, palavra: 'paralelepipedo' },
+  { id: 3004, nivel: 3, palavra: 'paralelepípedo' },
   { id: 3005, nivel: 3, palavra: 'interdisciplinar' },
 ];

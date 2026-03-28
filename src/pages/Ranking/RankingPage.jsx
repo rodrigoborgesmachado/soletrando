@@ -18,7 +18,7 @@ function RankingPage() {
       const response = await getRanking();
       setRanking(response);
     } catch (requestError) {
-      setError(requestError.message || 'Nao foi possivel carregar o ranking.');
+      setError(requestError.message || 'Não foi possível carregar o ranking.');
     } finally {
       setLoading(false);
     }
@@ -31,7 +31,7 @@ function RankingPage() {
   return (
     <PageContainer>
       <h1 className="page-title">Ranking</h1>
-      <p className="page-intro">Confira os melhores resultados separados por nivel e quantidade de questoes.</p>
+      <p className="page-intro">Confira os melhores resultados separados por nível e quantidade de questões.</p>
 
       <div className="ranking-actions">
         <Button variant="secondary" onClick={loadRanking} disabled={loading}>

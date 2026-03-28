@@ -28,8 +28,8 @@ function SelecaoNivelPage() {
 
   return (
     <PageContainer>
-      <h1 className="page-title">Selecione o nivel</h1>
-      <p className="page-intro">Escolha o nivel e a quantidade de questoes para iniciar o desafio.</p>
+      <h1 className="page-title">Selecione o nível</h1>
+      <p className="page-intro">Escolha o nível e a quantidade de questões para iniciar o desafio.</p>
       <LevelSelector
         options={levelOptions}
         selected={selectedLevel}

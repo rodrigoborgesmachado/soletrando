@@ -47,7 +47,7 @@ function buildGroups(data) {
 
 function RankingTable({ data }) {
   if (!data || data.length === 0) {
-    return <p className="ranking-empty">Ainda nao ha pontuacoes registradas.</p>;
+    return <p className="ranking-empty">Ainda não há pontuações registradas.</p>;
   }
 
   const groups = buildGroups(data);
@@ -58,17 +58,17 @@ function RankingTable({ data }) {
         <section
           key={`${group.nivel}-${group.quantidadeQuestoes}`}
           className="ranking-group"
-          aria-label={`Ranking nivel ${group.nivel} com ${group.quantidadeQuestoes} questoes`}
+          aria-label={`Ranking nível ${group.nivel} com ${group.quantidadeQuestoes} questões`}
         >
           <h2 className="ranking-group-title">
-            Nivel {group.nivel} - {group.quantidadeQuestoes} questoes
+            Nível {group.nivel} - {group.quantidadeQuestoes} questões
           </h2>
 
           <div className="ranking-table-wrap">
             <table className="ranking-table">
               <thead>
                 <tr>
-                  <th>Posicao</th>
+                  <th>Posição</th>
                   <th>Nome</th>
                   <th>Acertos</th>
                 </tr>

@@ -10,11 +10,11 @@ function ScoreBoard({ round, totalRounds, hits, misses, level, questionCount }) 
         </strong>
       </div>
       <div>
-        <span>Nivel</span>
+        <span>Nível</span>
         <strong>{level || '-'}</strong>
       </div>
       <div>
-        <span>Questoes</span>
+        <span>Questões</span>
         <strong>{questionCount || totalRounds}</strong>
       </div>
       <div>
